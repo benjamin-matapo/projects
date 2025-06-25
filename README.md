@@ -8,7 +8,7 @@ Welcome to my project-based learning journey! This repository contains hands-on 
 
 I believe in learning through practical application. Each project tackles real problems and implements features you'd find in production applications.
 
-## 🛠️ Recommended Full Stack Learning Path
+## 🛠️ Full Stack Learning Path
 
 Based on current industry trends and job market demands, here's the tech stack I'm working through:
 

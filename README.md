@@ -45,7 +45,7 @@ Based on current industry trends and job market demands, here's the tech stack I
 
 ## 📁 Projects
 
-### 🎯 [Spin the Wheel Food Decider](https://benjamin-matapo.github.io/projects/)
+### 🎯 [Spin the Wheel Food Decider](https://benjamin-matapo.github.io/projects/spin-the-wheel/)
 **Tech Stack:** HTML, CSS, JavaScript  
 **Description:** Can't decide what to eat? This interactive spinning wheel helps you make the tough food decisions! Features a smooth spinning animation, customizable food options, and responsive design that works on all devices.
 
@@ -55,7 +55,7 @@ Based on current industry trends and job market demands, here's the tech stack I
 - Responsive design principles
 - Canvas/SVG-like effects with pure CSS
 
-[🔗 Live Demo](https://benjamin-matapo.github.io/projects/) | [📖 Source Code](./index.html)
+[🔗 Live Demo](https://benjamin-matapo.github.io/projects/spin-the-wheel/) | [📖 Source Code](./index.html)
 
 ---
 

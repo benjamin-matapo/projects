@@ -1,0 +1,151 @@
+body {
+  background: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1d1d1f;
+}
+
+.container {
+  max-width: 500px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  padding: 40px 32px 32px 32px;
+  text-align: center;
+  border: 1px solid #e0e0e5;
+}
+
+h1 {
+  margin-bottom: 28px;
+  color: #1d1d1f;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 0;
+}
+
+#food-input {
+  padding: 10px 16px;
+  font-size: 17px;
+  border: 1px solid #d2d2d7;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  background: #f5f5f7;
+  transition: border 0.2s;
+}
+
+#food-input:focus {
+  border-color: #0071e3;
+  background: #fff;
+}
+
+#add-food {
+  padding: 10px 24px;
+  font-size: 17px;
+  border: none;
+  background: #0071e3;
+  color: #fff;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+#add-food:hover {
+  background: #005bb5;
+}
+
+#food-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  min-height: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.food-item {
+  display: flex;
+  align-items: center;
+  background: #f5f5f7;
+  color: #1d1d1f;
+  margin: 0;
+  padding: 7px 16px 7px 14px;
+  border-radius: 16px;
+  font-size: 16px;
+  border: 1px solid #e0e0e5;
+  font-weight: 400;
+  position: relative;
+  gap: 6px;
+}
+
+.delete-btn {
+  background: #e0e0e5;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #86868b;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.delete-btn:hover {
+  background: #d2d2d7;
+  color: #1d1d1f;
+}
+
+.wheel-section {
+  margin: 32px 0 18px 0;
+}
+
+#wheel {
+  display: block;
+  margin: 0 auto 18px auto;
+  background: #f5f5f7;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border: 1px solid #e0e0e5;
+}
+
+#spin {
+  padding: 12px 40px;
+  font-size: 19px;
+  background: #0071e3;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+#spin:hover {
+  background: #005bb5;
+}
+
+#result {
+  margin-top: 32px;
+  font-size: 24px;
+  color: #0071e3;
+  min-height: 32px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+} 

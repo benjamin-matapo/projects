@@ -2,11 +2,65 @@
 
 Welcome to my project-based learning journey! This repository contains hands-on projects I'm building to master different programming languages and technologies. The best way to learn is by doing, so each project here represents me getting my hands dirty with real code.
 
+---
+
+## 📁 Projects
+
+### ✅ [tr4cka – The Habit Tracker to Replace Your Reminders App](https://tr4cker-app.vercel.app/)
+**Tech Stack:** React, Next.js (App Router), TypeScript, Tailwind CSS, Vercel  
+
+**Description:**  
+tr4cka is my audition to replace your reminders app. It's a beautifully minimal, **mobile-first habit tracker** that gives you that dopamine hit from ticking things off — **color-coded progress bars, calendar history, and category toggling** included. Designed to help you build streaks, stay consistent, and track progress with just one tap.  
+
+🎯 Features:
+- ✅ Add and complete daily tasks or one-off to-dos  
+- 📅 Color-coded calendar view with historical streaks  
+- 🧠 Custom task groups like “Gym” or “Academics” (toggle on/off)  
+- 📱 Fully responsive and optimized for mobile  
+- 🌙 Dark mode support  
+- 🎉 Motivational color feedback: red (0%), yellow (50%), green (done well)  
+- 🔔 Optional scheduling and reminders (in progress)
+
+> Whether you're trying to meditate daily, study more, or finally stretch for once — **tr4cka has your back**.
+
+🔗 [**Live Demo**](https://tr4cker-app.vercel.app/)  
+📂 [**Source Code**](./tr4cker-app)
+
+---
+
+### 🎯 [Spin the Wheel Food Decider](https://benjamin-matapo.github.io/projects/spin-the-wheel/)
+**Tech Stack:** HTML, CSS, JavaScript  
+**Description:** Can't decide what to eat? This interactive spinning wheel helps you make the tough food decisions! Features a smooth spinning animation, customizable food options, and responsive design that works on all devices.
+
+**What I Learned:**
+- CSS animations and transforms
+- DOM manipulation with vanilla JavaScript
+- Responsive design principles
+- Canvas/SVG-like effects with pure CSS
+
+🔗 [Live Demo](https://benjamin-matapo.github.io/projects/spin-the-wheel/) | [📖 Source Code](./spin-the-wheel)
+
+---
+
+## 🔄 Coming Soon
+
+As I continue learning, I'll be adding projects that explore:
+
+- **React Todo App** - Component-based architecture
+- **Node.js REST API** - Backend development
+- **Full Stack Blog** - Connecting frontend and backend
+- **Real-time Chat App** - WebSocket implementation
+- **E-commerce Site** - Complete full stack application
+
+---
+
 ## 🎯 Learning Philosophy
 
 > "Tell me and I forget, teach me and I may remember, involve me and I learn." - Benjamin Franklin
 
 I believe in learning through practical application. Each project tackles real problems and implements features you'd find in production applications.
+
+---
 
 ## 🛠️ Full Stack Learning Path
 
@@ -43,32 +97,6 @@ Based on current industry trends and job market demands, here's the tech stack I
 
 ---
 
-## 📁 Projects
-
-### 🎯 [Spin the Wheel Food Decider](https://benjamin-matapo.github.io/projects/spin-the-wheel/)
-**Tech Stack:** HTML, CSS, JavaScript  
-**Description:** Can't decide what to eat? This interactive spinning wheel helps you make the tough food decisions! Features a smooth spinning animation, customizable food options, and responsive design that works on all devices.
-
-**What I Learned:**
-- CSS animations and transforms
-- DOM manipulation with vanilla JavaScript
-- Responsive design principles
-- Canvas/SVG-like effects with pure CSS
-
-[🔗 Live Demo](https://benjamin-matapo.github.io/projects/spin-the-wheel/) | [📖 Source Code](./index.html)
-
----
-
-## 🔄 Coming Soon
-
-As I continue learning, I'll be adding projects that explore:
-
-- **React Todo App** - Component-based architecture
-- **Node.js REST API** - Backend development
-- **Full Stack Blog** - Connecting frontend and backend
-- **Real-time Chat App** - WebSocket implementation
-- **E-commerce Site** - Complete full stack application
-
 ## 🎓 Learning Resources
 
 Some resources that have been invaluable on this journey:
@@ -76,6 +104,8 @@ Some resources that have been invaluable on this journey:
 - [freeCodeCamp](https://www.freecodecamp.org/) - Free coding curriculum
 - [The Odin Project](https://www.theodinproject.com/) - Full stack web development path
 - [JavaScript.info](https://javascript.info/) - Modern JavaScript tutorial
+
+---
 
 ## 🤝 Let's Connect
 

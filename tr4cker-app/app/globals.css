@@ -1,0 +1,553 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes confetti {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.confetti {
+  animation: confetti 3s ease-in-out infinite;
+}
+
+/* Progress bar custom colors */
+.progress-red .progress-indicator {
+  background-color: rgb(239 68 68);
+}
+
+.progress-orange .progress-indicator {
+  background-color: rgb(249 115 22);
+}
+
+.progress-green .progress-indicator {
+  background-color: rgb(34 197 94);
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--foreground));
+}
+
+/* Enhanced Calendar Styles */
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+}
+
+.calendar-day-progress {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.calendar-day-progress::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+}
+
+.calendar-day-progress:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dark .calendar-day-progress:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Brand Colors and Gradients */
+.brand-gradient {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+.brand-text-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-logo {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.dark .brand-logo {
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+/* Progress Colors with Smooth Transitions */
+.progress-excellent {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.progress-good {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+.progress-fair {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+}
+
+.progress-needs-work {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+}
+
+/* Enhanced Button Styles with Brand Colors */
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Calendar Responsive Design */
+@media (max-width: 640px) {
+  .calendar-day-progress {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 0.75rem;
+  }
+
+  .calendar-container {
+    padding: 1rem;
+    min-height: calc(100vh - 150px);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .calendar-day-progress {
+    height: 3rem;
+    width: 3rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .calendar-day-progress {
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Enhanced Dark Mode Support */
+.dark .brand-text-gradient {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Progress Legend Enhancements */
+.progress-legend-item {
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.progress-legend-item:hover {
+  transform: scale(1.05);
+  border-color: currentColor;
+}
+
+/* Loading Animation for Calendar */
+@keyframes calendar-load {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.calendar-load-animation {
+  animation: calendar-load 0.5s ease-out;
+}
+
+/* Enhanced Focus States */
+.calendar-day-progress:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Smooth Color Transitions */
+.color-transition {
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform
+    0.2s ease;
+}
+
+/* Brand-consistent shadows */
+.brand-shadow {
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.dark .brand-shadow {
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 640px) {
+  .calendar-day-progress {
+    height: 2.25rem;
+    width: 2.25rem;
+    font-size: 0.7rem;
+  }
+
+  .mobile-bottom-nav {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Improved Task Card Interactions */
+.task-card {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dark .task-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.task-card:active {
+  transform: translateY(0);
+}
+
+/* Progress Bar Animations */
+.progress-bar {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Calendar Day Responsive Text */
+@media (max-width: 640px) {
+  .calendar-day-text {
+    font-size: 0.75rem;
+  }
+
+  .calendar-percentage {
+    display: none;
+  }
+}
+
+/* Brand Colors for Buttons and Accents */
+.btn-brand {
+  background: linear-gradient(135deg, #0096ff 0%, #0070f3 100%);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-brand:hover {
+  background: linear-gradient(135deg, #0070f3 0%, #0052cc 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(0, 150, 255, 0.3);
+}
+
+/* Enhanced Focus States for Accessibility */
+.focus-ring:focus-visible {
+  outline: 2px solid #0096ff;
+  outline-offset: 2px;
+  border-radius: 0.375rem;
+}
+
+/* Smooth Page Transitions */
+.page-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Loading States */
+.loading-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Enhanced Card Shadows */
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.card-shadow:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.dark .card-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dark .card-shadow:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Improved Text Contrast */
+.text-high-contrast {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.dark .text-high-contrast {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* Touch-friendly Button Sizes */
+@media (max-width: 768px) {
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Progress Ring Animation */
+@keyframes progress-ring {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.progress-ring {
+  animation: progress-ring 1s ease-out;
+}
+
+/* Calendar Grid Enhancements */
+.calendar-grid {
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+}
+
+@media (max-width: 640px) {
+  .calendar-grid {
+    gap: 0.125rem;
+  }
+}
+
+/* Status Indicators */
+.status-dot {
+  position: relative;
+}
+
+.status-dot::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.dark .status-dot::after {
+  border-color: #1f2937;
+}
+
+/* Accessible Focus Indicators */
+.focus-visible\:ring-brand:focus-visible {
+  --tw-ring-color: #0096ff;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+@media (max-width: 400px) {
+  .calendar-day-progress,
+  .calendar-day,
+  .rdp-day {
+    height: 1.75rem !important;
+    width: 1.75rem !important;
+    font-size: 0.65rem !important;
+    margin: 0.1rem !important;
+  }
+  .calendar-head_cell,
+  .rdp-head_cell {
+    height: 1.75rem !important;
+    width: 1.75rem !important;
+    font-size: 0.65rem !important;
+    padding: 0 !important;
+  }
+  .calendar-caption_label,
+  .rdp-caption_label {
+    font-size: 0.85rem !important;
+    padding: 0 0.25rem !important;
+  }
+  .calendar-container,
+  .calendar-grid,
+  .rdp,
+  .rdp-table,
+  .rdp-months,
+  .rdp-month {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  .calendar-percentage,
+  .calendar-day span:last-child,
+  .rdp-day span:last-child {
+    display: none !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .calendar-day-progress,
+  .calendar-day,
+  .rdp-day {
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+    font-size: 0.6rem !important;
+    margin: 0.05rem !important;
+  }
+  .calendar-head_cell,
+  .rdp-head_cell {
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+    font-size: 0.6rem !important;
+    padding: 0 !important;
+  }
+  .calendar-caption_label,
+  .rdp-caption_label {
+    font-size: 0.75rem !important;
+    padding: 0 0.1rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .calendar-container,
+  .calendar-grid,
+  .rdp,
+  .rdp-table,
+  .rdp-months,
+  .rdp-month {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+}

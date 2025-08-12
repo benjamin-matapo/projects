@@ -28,6 +28,28 @@ tr4cka is my audition to replace your reminders app. It's a beautifully minimal,
 
 ---
 
+### 📄 [CV Page - Professional Resume Viewer](https://benjamin-cv.vercel.app/)
+**Tech Stack:** React, Next.js (App Router), TypeScript, Tailwind CSS, Vercel
+
+**Description:**  
+A modern, responsive CV viewer and download page built with Next.js. Features a clean, professional design with automatic last-updated date detection and mobile-first responsive design. Perfect for showcasing your resume online with easy download functionality.
+
+🎯 Features:
+- 📱 **Mobile-First Design** - Fully responsive across all devices
+- 📄 **PDF Preview** - In-browser PDF viewing with fallback support
+- 📅 **Auto Date Detection** - Automatically shows when CV was last updated
+- 🎨 **Modern UI** - Clean design with brand colors and smooth animations
+- 📥 **Easy Download** - One-click PDF download with proper headers
+- 🌙 **Accessible** - Proper ARIA labels and semantic HTML
+- ⚡ **Fast Loading** - Optimized with Next.js App Router
+
+> A professional way to showcase your resume online with modern web technologies.
+
+🔗 [**Live Demo**](https://benjamin-cv.vercel.app/)  
+📂 [**Source Code**](./cv-page)
+
+---
+
 ### 🎯 [Spin the Wheel Food Decider](https://benjamin-matapo.github.io/projects/spin-the-wheel/)
 **Tech Stack:** HTML, CSS, JavaScript  
 **Description:** Can't decide what to eat? This interactive spinning wheel helps you make the tough food decisions! Features a smooth spinning animation, customizable food options, and responsive design that works on all devices.
